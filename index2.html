@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="d3.js"></script>
+</head>
+<body>
+    <script type="text/javascript" >
+        var w = 500;
+        var h = 200;
+        var dataset = [5,10,15]
+        var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width",w)
+                    .attr("height",h);
+                    // .attr("stroke","black")
+                    // .attr("stroke-width",2)//样式失败？why
+        var circles = svg.selectAll("circle")
+                         .data(dataset)
+                         .enter()
+                         .append("circle")
+                         .attr("cx",function(d){
+                             return d;
+                         })
+                         .attr("cy",function(d){
+                             return d;
+                         })
+                         .attr("r","4")
+                         .attr("fill","blue");
+    </script>
+</body>
+</html>

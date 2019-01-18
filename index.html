@@ -88,7 +88,9 @@
 //          d3.max(dataset,function(d){
 //              return d[0]
 //          });
-
+        // var scale = d3.scale.linear() .domain([0.123, 4.567])
+        //                 .range([0, 500])
+        //                 .nice();//注意！此方法含义
         var padding = 20
         var xScale = d3.scale.linear()
                              .domain([0,d3.max(dataset3,function(d){
